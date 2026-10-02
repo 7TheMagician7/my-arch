@@ -1,0 +1,46 @@
+input {
+	keyboard {
+		xkb {
+			layout "br"
+      variant "abnt2"
+		}
+	}
+}
+
+window-rule {
+	match app-id="firefox"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="steam"
+	open-maximized true
+}
+
+window-rule {
+	match app-id="heroic"
+	open-maximized true
+}
+
+window-rule {
+  match app-id="org.gnome.Nautilus"
+  open-floating false
+  open-maximized true
+}
+
+window-rule {
+	match app-id="com.mitchellh.ghostty"
+	open-maximized true
+}
+
+window-rule {
+  match app-id="Spotify"
+  open-maximized true
+}
+
+window-rule {
+  match app-id="com.microsoft.VSCode"
+  open-maximized true
+}
+
+include optional=true "binds.kdl"

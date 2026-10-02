@@ -1,0 +1,10 @@
+font-size = 14
+
+background-opacity = 0.6
+background-blur-radius = 0
+
+keybind = ctrl+z=unbind
+keybind = ctrl+shift+p=unbind
+keybind = ctrl+t=unbind
+keybind = ctrl+shift+t=unbind
+keybind = ctrl+enter=unbind
