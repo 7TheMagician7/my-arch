@@ -8,7 +8,10 @@ input {
 }
 
 environment {
-  GTK_IM_MODULE "simple"
+  GTK_IM_MODULE "wayland"
+  XMODIFIERS "@im=ibus"
+  QT_IM_MODULES "wayland;ibus"
+  QT_IM_MODULE "ibus"
 }
 
 window-rule {
@@ -46,5 +49,7 @@ window-rule {
   match app-id="com.microsoft.VSCode"
   open-maximized true
 }
+
+spawn-at-startup "ibus-daemon" "-drx"
 
 include optional=true "binds.kdl"
