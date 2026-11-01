@@ -8,10 +8,9 @@ input {
 }
 
 environment {
-  GTK_IM_MODULE "wayland"
-  XMODIFIERS "@im=ibus"
-  QT_IM_MODULES "wayland;ibus"
-  QT_IM_MODULE "ibus"
+  GTK_IM_MODULE "simple"
+  QT_IM_MODULE "simple"
+  XMODIFIERS "@im=null"
 }
 
 window-rule {
@@ -50,6 +49,6 @@ window-rule {
   open-maximized true
 }
 
-spawn-at-startup "ibus-daemon" "-drx"
+spawn-sh-at-startup "sleep 1 && ibus-daemon -drx"
 
 include optional=true "binds.kdl"
